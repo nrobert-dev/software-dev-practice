@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+    <head>
+        <title>Design Patterns Implementation</title>
+        <link rel="stylesheet" href="./style.css" type="text/css"/>
+    </head>
+    <body>
+        <div class="container">
+            <h3>Taxes</h3>
+            <div class="tax-box">
+                Income Tax : <input id="tax"value="10" type="number"/>
+                Healthcare Tax : <input id="tax-health" value="5" type="number"/>
+                Pension Tax : <input id="tax-pension" value="4" type="number"/>
+
+                Tax Method : <select id="strategy">
+                    <option value="0">Simple</option>
+                    <option value="1">New 2020 Formula</option>
+                </select>
+            </div>
+
+            <h3>User Details</h3>
+            <div>
+                Name : <input id="name" type="text"/>
+                Surname : <input id="surname" type="text"/>
+                Type : <select id="type">
+                    <option value="0">LLC</option>
+                    <option value="1">Individual</option>
+                </select>
+                Income : <input id="income" type="number"/>
+                Service Costs : <input id="cost" type="number"/>
+                Tax Identification(Optional if LLC) : <input id="taxID" type="text"/>
+
+                <button id="add-user">Add User</button>
+            </div>
+
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Surname</th>
+                            <th>Type</th>
+                            <th>Tax Identification</th>
+                            <th>Tax Exempt</th>
+                            <th>Income</th>     
+                            <th>Service Costs</th>
+                            <th style="background : rgb(149, 194, 25)">Profit</th>
+                            <th>Taxes</th>
+                        </tr>
+                    </thead>
+                    <tbody id='t-body'>
+                
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="dev-box">
+                Dev Box : 
+                <button id="log-button">Show Log</button>
+                <button id="log-calls">Show Amount Of Calls</button>
+            </div>
+
+        </div>
+
+        <script src="./src-js/TaxStrategies.js"></script>  
+        <script src="./src-js/UserBuilder.js"></script>  
+        <script src="./src-js/UserFactory.js"></script>    
+        <script src="./src-js/LogManager.js"></script>   
+        <script src="./src-js/ErrorManager.js"></script>
+        <script src="./src-js/main.js"></script>
+    </body>
+</html>

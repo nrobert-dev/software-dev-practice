@@ -1,0 +1,7 @@
+This file contains the implementation of the following design patterns :
+    1. Factory
+    2. Singleton
+    3. Strategy
+    4. Builder
+    5. Module
+    6. Observer

@@ -1,0 +1,70 @@
+.container{
+    width : 90%;
+    height : 80%;
+    padding : 20px;
+    margin : 100px auto;
+    background : #d9fbff
+}
+
+.tax-box{
+    margin-bottom : 15px;
+    background : rgb(190, 190, 190);
+    height : 40px;
+    display:flex;
+    align-items: center;
+}
+
+.dev-box{
+    margin-bottom : 15px;
+    background : rgb(219, 219, 219);
+    margin-top : 20px;
+    border-top : 2px solid black;
+    padding : 10px;
+    display:flex;
+    align-items: center;
+}
+
+table{
+    width:100%;
+    margin-top : 40px;
+}
+
+table thead{
+    background : gray;
+    background : rgb(88, 150, 88);
+    color : white;
+}
+
+th{
+    height : 30px;
+}
+
+tbody > tr {
+    height : 25px;
+    text-align : center;
+}
+
+tbody > tr:nth-child(even){
+    background : rgb(211, 223, 206);
+}
+tbody > tr:nth-child(odd){
+    background : rgb(167, 179, 162);
+}
+
+button{
+    height : 40px;
+    width : 150px;
+    background : rgb(56, 153, 192);
+    color : white;
+    border : none;
+    border-radius : 5px;
+    font-size : 13px;
+    font-weight: bolder;
+    margin : 10px;
+}
+
+button:hover{
+    background : rgb(70, 218, 238);
+    border-radius : 1px;
+    transition: 0.2s linear all;
+}
