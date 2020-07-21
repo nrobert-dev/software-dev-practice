@@ -12,11 +12,9 @@ function factoryCreateUser(){
            
     switch(parseInt(strategy)){
         case 0:
-            console.log('hr')
             user.setStrategy(new SimpleTax());
             break;
         case 1:
-            console.log('hr')
             user.setStrategy(new NewlyIntroducedTax());
             break;
     }

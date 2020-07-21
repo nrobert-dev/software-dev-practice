@@ -6,7 +6,7 @@ function LogSingleton(){
         this.amountOfCalls = 0;
 
         this.notify = (message) => {
-            console.warn("[Log]", message, new Date());
+            this.log=[];
         }
 
         this.addLog = (message) => {
@@ -15,11 +15,6 @@ function LogSingleton(){
 
         this.printLog = () => {
             console.warn(this.log);
-        }
-
-        /* Notify Implementation for the Subscriber pattern */
-        this.notify = () => {
-            this.log = [];
         }
     }
 

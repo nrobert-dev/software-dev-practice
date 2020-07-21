@@ -15,6 +15,7 @@ window.addEventListener('load', function(){
     errorManagerTaxes.addWatchedElement(({id : 'tax-health', errorValue:'0', errorMessage:"Tax cannot be 0"}));
 
 
+    /* Adding functionality on the Add User button */
     document.getElementById('add-user').addEventListener('click', function(){
         if(errorManagerInputs.errorCheck() && errorManagerTaxes.errorCheck()){
             const user = factoryCreateUser();
@@ -33,13 +34,25 @@ window.addEventListener('load', function(){
                     <td>${user.tax}</td>
                 </tr>
             `;
-            console.log(user);
         }
         else{
             alert("Validation errors found. Check log for details");
         }
     });
+
+    const resetSubject = new Subject();   
+    resetSubject.addObserver(function(){
+        const table = document.getElementById('t-body');
+        table.innerHTML='';
+    });
+    resetSubject.addObserver(function(){
+        LogManager.getLogManager().notify();
+    });
+    resetSubject.addObserver(() => alert('Setting new fiscal year!'));
+
+    document.getElementById('reset').addEventListener('click', () => resetSubject.notifyObservers());
 });
+
 
 document.getElementById('log-button').addEventListener('click', function(){
     console.warn("Printing log here");
